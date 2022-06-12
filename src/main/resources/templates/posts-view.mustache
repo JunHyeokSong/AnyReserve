@@ -1,0 +1,36 @@
+{{>layout/header}}
+
+<h1>글 보기</h1>
+
+<div class="col-md-12">
+    <div class="col-md-4">
+        제목
+        <div class="card">
+            <div class="card-body">
+                {{post.title}}
+            </div>
+        </div>
+
+        글쓴이
+        <div class="card">
+            <div class="card-body">
+                {{post.author}}
+            </div>
+        </div>
+        내용
+        <div class="card">
+            <div class="card-body">
+                {{post.content}}
+            </div>
+        </div>
+        <br>
+        <a href="/" role="button" class="btn btn-secondary">
+            돌아가기
+        </a>
+        <a href="/posts/update/{{id}}" class="btn btn-primary">
+            수정/삭제
+        </a>
+    </div>
+</div>
+
+{{>layout/footer}}
