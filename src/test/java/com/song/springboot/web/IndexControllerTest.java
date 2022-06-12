@@ -12,7 +12,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-public class indexControllerTest {
+public class IndexControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
@@ -23,6 +23,6 @@ public class indexControllerTest {
         String body = this.restTemplate.getForObject("/", String.class);
 
         // Then
-        assertThat(body).contains("Main page");
+        assertThat(body).contains("환영합니다");
     }
 }
